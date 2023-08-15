@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *
+{
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form
+{
+    height: 400px;
+    width: 300px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    flex-direction: column;
+}
+input
+{
+    display: flex;
+    background-color: transparent;
+    width: 250px;
+ 
+    justify-content: center;
+    outline: none;
+    border: 1px solid red;
+    margin: 20px 20px 20px 20px;
+    padding: 10px;
+
+}
+h1
+{
+    background-color: transparent;
+    width: 300px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+button
+{
+    background-color: transparent;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    margin-left: 103px;
+    
+    border: 0px;
+
+}
+#signup
+{
+    background-color: transparent;
+    color: red;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+#signup a{
+    background-color: transparent;
+    color: rgb(30, 248, 30);
+    text-decoration: none;
+
+}
+.errormsg
+{
+    background-color: transparent;
+    color: red;
+    text-shadow: 2px red;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <h1>this is a dyinamic page</h1>
+    <h3> and the name of the outher is <%=locals.name %></h3> -->
+
+    <main>
+        <form method="post" action="/api/v1/user/loginUser"> 
+            <h1>LoginUser</h1>
+<input type="text" name="email" placeholder="enter your email" value="<%= locals.email %>">
+<input type="password" name="password" placeholder="enter your password">
+<button type="submit">SignIn</button>
+<p class="errormsg"><%= locals.message %></p>
+<div id="signup">New to this page <a href=>SignUP</a></div>
+
+        </form>
+    </main>
+</body>
+
+</html>

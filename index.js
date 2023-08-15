@@ -12,9 +12,7 @@ import cors from 'cors';
 config()
 
 app.set("view engine","ejs")
-app.use(cors(
-    {origin: [process.env.FRONTEND_URL]}
-))
+app.use(cors())
 app.use(express.static(path.join(path.resolve(),"public")));
 
 app.use(express.urlencoded({extended:true}));

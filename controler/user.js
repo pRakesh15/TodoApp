@@ -212,6 +212,6 @@ export const logoutUser=(req,res)=>
     res.clearCookie('authantication')
     res.status(200).json({
       success:true,
-      message:"User deleted Sucessfully"
+      message:"logOut Sucessfully"
     })
 }

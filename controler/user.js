@@ -209,9 +209,9 @@ let id=req.params.id
 
 export const logoutUser=(req,res)=>
 {
-    res.clearCookie('authantication')
-    res.status(200).json({
+    
+    res.status(200).cookie("authantication","",{expires:new Date(Date.now())}).json({
       success:true,
-      message:"logOut Sucessfully"
+      message:"loged Out Sucessfully"
     })
 }
